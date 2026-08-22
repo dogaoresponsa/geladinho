@@ -323,7 +323,7 @@ export const StoreSettingsModal: React.FC<StoreSettingsModalProps> = ({
                 className="w-full bg-white border border-amber-300 rounded-xl px-3 py-2 text-xs text-stone-900 font-mono font-bold tracking-widest focus:outline-none focus:ring-2 focus:ring-amber-500/20"
               />
               <p className="text-[10px] text-stone-500 mt-1">
-                Esta senha é exigida para acessar o gerenciamento de pedidos, cardápio, estoque e configurações. Padrão: <strong>1234</strong>.
+                Esta senha é exigida para acessar o gerenciamento de pedidos, cardápio, estoque e configurações.
               </p>
             </div>
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Lock, X, KeyRound, AlertCircle, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Lock, X, KeyRound, AlertCircle, ArrowRight } from 'lucide-react';
 
 interface AdminAuthModalProps {
   isOpen: boolean;
@@ -16,7 +16,6 @@ export const AdminAuthModal: React.FC<AdminAuthModalProps> = ({
 }) => {
   const [pin, setPin] = useState('');
   const [error, setError] = useState(false);
-  const [showDefaultHint, setShowDefaultHint] = useState(true);
 
   if (!isOpen) return null;
 
@@ -162,20 +161,8 @@ export const AdminAuthModal: React.FC<AdminAuthModalProps> = ({
             </button>
           </div>
 
-          {/* Default PIN Notice */}
-          {showDefaultHint && (
-            <div className="w-full p-2.5 bg-amber-50 border border-amber-200/80 rounded-xl text-center text-[11px] text-amber-800 flex items-center justify-between gap-2">
-              <div className="flex items-center gap-1.5 text-left">
-                <ShieldCheck className="w-4 h-4 text-amber-600 shrink-0" />
-                <span>
-                  PIN Padrão: <strong>{currentPin || '1234'}</strong> (alterável nas configurações)
-                </span>
-              </div>
-            </div>
-          )}
-
           {/* Submit Button */}
-          <div className="w-full mt-4 flex gap-2">
+          <div className="w-full mt-2 flex gap-2">
             <button
               type="button"
               onClick={onClose}
